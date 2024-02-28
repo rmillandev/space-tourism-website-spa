@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Colors */
+:root{
+    --azul-oscuro: #0B0D17;
+    --azul-claro: #D0D6F9;
+    --blanco: #FFFFFF;  
+    --font-bellefair: "Bellefair", serif;
+    --font-barlow: "Barlow Condensed", sans-serif;
+}

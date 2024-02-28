@@ -1,0 +1,253 @@
+@import url('index.css');
+
+/* Styles Desktop */
+
+.container__destination{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/public/assets/destination/background-destination-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container__destination article{
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    right: 3rem;
+    height: 500px;
+
+}
+
+.title__destination{
+    font-family: var(--font-barlow);
+    font-size: 24px;
+    color: var(--blanco);
+    letter-spacing: 4px;
+    padding-left: 8rem;
+    padding-bottom: 1rem;
+}
+
+.title__destination span{
+    font-weight: 400;
+    padding-right: .8rem;
+    opacity: .6;
+}
+
+.container__data{
+    display: flex;
+    justify-content: space-around;
+}
+
+.information{
+    width: 450px;
+}
+
+.information .items{
+    display: flex;
+    gap: 2rem;
+}
+
+.information .items .item{
+    position: relative;
+    list-style: none;
+    color: var(--blanco);
+    font-family: var(--font-barlow);
+    font-size: 16px;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+
+.information .items .item.active::after{
+    position: absolute;
+    left: 0;
+    bottom: -12px;
+    content: "";
+    background-color: var(--blanco);
+    width: 100%;
+    height: 2.5px;
+}
+
+.information .name{
+    color: var(--blanco);
+    font-size: 100px;
+    font-family: var(--font-bellefair);
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 2rem 0;
+}
+
+.information .description{
+    color: var(--blanco);
+    font-family: var(--font-barlow);
+    font-size: 17px;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+}
+
+hr{
+    margin: 2rem 0;
+    opacity: .5;
+}
+
+.box-dt{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.distance span, .travel span{
+    font-family: var(--font-barlow);
+    color: var(--blanco);
+    font-weight: 400;
+    opacity: .6;
+    font-size: 14px;
+    letter-spacing: 1.7px;
+}
+
+.distance p, .travel p{
+    font-family: var(--font-bellefair);
+    color: var(--blanco);
+    font-size: 28px;
+    text-transform: uppercase;
+    padding-top: .5rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1100px) {
+    .title__destination{
+        font-size: 20px;
+        padding-left: 4rem;
+    }
+}
+
+
+/* Media Queries - Tablet */
+
+@media screen and (max-width: 1000px) {
+    .img{
+        width: 380px;
+        height: 380px;
+    }
+
+    .img img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .information .name{
+        font-size: 70px;
+    }
+    
+    .information .description{
+        font-size: 15px;
+    }
+    
+    .distance span, .travel span{
+        font-size: 12px;
+    }
+    
+    .distance p, .travel p{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .container__destination{
+        height: 160vh;
+        background-image: url('/public/assets/destination/background-destination-tablet.jpg');
+    }
+
+    .container__data{
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .title__destination{
+        font-size: 20px;
+        padding-left: 0;
+        padding-bottom: 2rem;
+        padding-top: 3rem;
+    }
+
+    .img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .information .items{
+        justify-content: center;
+    }
+
+    .information .name{
+        font-size: 80px;
+        text-align: center;
+    }
+    
+    .information .description{
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .box-dt{
+        justify-content: center;
+        text-align: center;
+        gap: 6rem;
+    }
+    
+    .distance span, .travel span{
+        font-size: 14px;
+    }
+    
+    .distance p, .travel p{
+        font-size: 28px;
+    }
+    
+}
+
+
+/* Media Queries - Mobile */
+
+@media screen and (max-width: 550px) {
+    .container__destination{
+        height: 170vh;
+        background-image: url('/public/assets/destination/background-destination-mobile.jpg');
+    }
+
+    .title__destination{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .img{
+        width: 260px;
+        height: 260px;
+    }
+    
+    .information{
+        width: 100%;
+    }
+
+    .information .items .item{
+        font-size: 14px;
+    }
+
+    .information .name{
+        font-size: 60px;
+    }
+
+    .information .description{
+        font-size: 15px;
+    }
+
+    .box-dt{
+        gap: 3rem;
+        flex-direction: column;
+    }
+    
+
+
+}

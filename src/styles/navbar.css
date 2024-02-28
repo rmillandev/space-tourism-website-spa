@@ -1,0 +1,126 @@
+@import url('index.css');
+
+.menu{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before {
+    background-color: var(--blanco) !important;
+}
+
+.logo{
+    position: relative;
+    z-index: 100;
+    padding-left: 3rem;
+}
+
+.menu__items{
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    padding: 2rem 8rem;
+    background-color: rgba(59.22, 59.22, 59.22, 0.5);
+    backdrop-filter: blur(10px);
+}   
+
+.menu__item{
+    position: relative;
+}
+
+.menu__item.active::after{
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    content: "";
+    background-color: var(--blanco);
+    width: 100%;
+    height: 2.5px;
+}
+
+.item__link{
+    text-decoration: none;
+    color: var(--blanco);
+    font-family: var(--font-barlow);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 3.5px;
+}
+
+.item__link span{
+    font-weight: bold;
+}
+
+
+
+/* Media Queries - Tablet */
+
+@media screen and (max-width: 1024px) {
+    .menu{
+        padding: 0;
+    }
+
+    .menu__items{
+        padding: 2rem 3rem;
+    }  
+}
+
+@media screen and (max-width: 700px) {
+    .logo{
+        padding: 0;
+    }
+}
+
+/* Media Queries - Mobile */
+
+@media screen and (max-width: 550px) {
+    .logo{
+        padding-top: 6rem;
+        padding-left: 1rem;
+        position: fixed;
+    }
+
+    .hamburger{
+        display: block;
+        position: fixed;
+        z-index: 100;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .menu__items{
+        flex-direction: column;
+        align-items: start;
+        gap: 3rem;
+        padding: 10rem 4rem;
+        position: fixed;
+        z-index: 99;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 30%;
+        backdrop-filter: blur(15px);
+        transform: translateX(100%);
+        transition: .8s ease;
+    }
+    
+    .menu__items.active{
+        transform: translateX(0);
+    }
+
+    .item__link{
+        font-size: 16px;
+    }
+    
+}
