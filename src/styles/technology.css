@@ -1,0 +1,229 @@
+@import url('index.css');
+
+
+.container__technology{
+    width: 100%;
+    height: 100vh;
+    background-image: url('/public/assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container__technology article{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 560px;
+}
+
+.title__technology{
+    color: var(--blanco);
+    font-family: var(--font-barlow);
+    font-size: 24px;
+    letter-spacing: 4px;
+    margin-left: 10rem;
+}
+
+.title__technology span{
+    font-weight: 400;
+    padding-right: .8rem;
+    opacity: .6;
+}
+
+.container__data-technology{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10rem;
+}
+
+.container__options{
+    display: flex;
+    gap: 5rem;
+    margin-top: 6rem;
+}
+
+.information__option{
+    color: var(--blanco);
+    width: 500px;
+}
+
+.information__option h6{
+    font-family: var(--font-barlow);
+    font-size: 16px;
+    opacity: .6;
+    letter-spacing: 2px;
+}
+
+.information__option h3{
+    font-family: var(--font-bellefair);
+    font-size: 56px;
+    font-weight: normal;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.information__option p{
+    font-family: var(--font-barlow);
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: 2px;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.option{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--blanco);
+    cursor: pointer;
+    transition: .2s ease;
+    font-family: var(--font-bellefair);
+    font-size: 32px;
+    color: var(--blanco);
+}
+
+.option.active{
+    background-color: var(--blanco);
+    color: black;
+}
+
+.option:hover{
+    border: none;
+    background-color: var(--blanco);
+    color: black;
+}
+
+.container__img-technology{
+    width: 480px;
+    height: 480px;
+}
+
+.container__img-technology img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1300px) {
+    .container__data-technology{
+        margin-left: 3rem;
+    }
+
+    .container__options{
+        gap: 2rem;
+    }
+}
+
+
+/* Media Queries - Tablet */
+@media screen and (max-width: 1024px) {
+    .container__technology{
+        height: 170vh;
+        background-image: url('/public/assets/technology/background-technology-tablet.jpg');
+    }
+
+    .title__technology{
+        font-size: 20px;
+        margin-left: 3rem;
+    }
+
+    .container__data-technology{
+        flex-direction: column-reverse;
+        margin-left: 0;
+        margin-top: 5rem;
+    }
+
+    .container__options{
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .options{
+        flex-direction: row;
+    }
+
+    .option{
+        width: 60px;
+        height: 60px;
+        font-size: 26px;
+    }
+
+    .information__option{
+        text-align: center;
+    }    
+
+    .information__option h6{
+        font-size: 16px;
+    }
+    
+    .information__option h3{
+        font-size: 40px;
+    }
+    
+    .information__option p{
+        font-size: 16px;
+    }
+
+    .container__img-technology{
+        width: 100%;
+        height: 380px;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .title__technology{
+        margin-top: 3rem;
+    }
+}
+
+/* Media Queries - Mobile */
+@media screen and (max-width: 550px) {
+    .container__technology{
+        height: 165vh;
+        background-image: url('/public/assets/technology/background-technology-mobile.jpg');
+    }    
+    
+    .title__technology{
+        font-size: 17px;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .container__img-technology{
+        width: 100%;
+        height: 300px;
+    }
+
+    .information__option{
+        width: 100%;
+    }
+
+    .information__option h6{
+        font-size: 16px;
+    }
+    
+    .information__option h3{
+        font-size: 34px;
+    }
+    
+    .information__option p{
+        font-size: 16px;
+        padding: 0 1rem;
+    }
+
+}
